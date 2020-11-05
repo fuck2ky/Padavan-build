@@ -46,6 +46,7 @@ jobs:
         cd /opt/rt-n56u/trunk/user/shared
         # sed -i "s#https://cdn.jsdelivr.net/gh/Padavan_CI/ssp/trojan#https://cdn.jsdelivr.net/gh/fuck2ky/Padavan-build/ssp/trojan#g" ./defaults.c
         sed -i "s#https://cdn.jsdelivr.net/gh/Padavan_CI/ssp/v2ray#https://cdn.jsdelivr.net/gh/fuck2ky/Padavan-build/ssp/v2ray#g" ./defaults.c
+        sed -i "s#https://gitee.com/privacy-protection-tools/anti-ad/raw/master/anti-ad-for-dnsmasq.conf#https://cdn.jsdelivr.net/gh/privacy-protection-tools/anti-AD/adblock-for-dnsmasq.conf#g" ./defaults.c
     - name: set go
       run: |
         cd /opt/hostedtoolcache/go
