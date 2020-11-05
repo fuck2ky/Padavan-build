@@ -16,7 +16,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     if: github.event.repository.owner.id == github.event.sender.id
 
     steps:
@@ -48,6 +48,12 @@ jobs:
         wget https://github.com/upx/upx/releases/download/v3.94/upx-3.94-amd64_linux.tar.xz
         tar -Jxf upx*.tar.xz
         sudo cp upx*/upx /usr/bin
+    - name: Get current time
+      uses: 1466587594/get-current-time@v2
+      id: current-time
+      with:
+        format: YY.MMDDHH
+        utcOffset: "+08:00"
     - name: Build Firmware
       env:
         TNAME: K2P-5.0
